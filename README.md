@@ -101,10 +101,10 @@ Antes da entrega, preencher esta tabela com os nomes e as contribuições reais 
 
 | Integrante | Contribuição principal |
 |---|---|
-| Integrante 1 | Totem e emissão de senhas |
-| Integrante 2 | Terminal e fluxo de atendimento |
-| Integrante 3 | Painel público e visão geral |
-| Integrante 4 | Histórico, filtros e documentação |
+| GILDO JUNIOR DA SILVA - 01956945 | Totem e emissão de senhas de atendimento |
+| Carlos Henrique do Monte - 01803176  | Terminal e fluxo de atendimento pelo lado do usuário e do atendente |
+| Caio Henrique Melo Diniz - 01847836 | Painel público e visão geral, componentes de front-end e estruturaçãode rotas, conjunto com mais um integrante |
+| Ruben Marques de Souza Barbosa - 01849527 | Histórico, filtros e documentação e estruturação de rotas |
 
 ## Evolução planejada para a AV2
 
@@ -124,4 +124,4 @@ Antes da entrega, preencher esta tabela com os nomes e as contribuições reais 
 
 ## Uso de inteligência artificial
 
-Ferramentas de inteligência artificial foram usadas como apoio na estruturação da interface, revisão de código e documentação. A equipe permanece responsável por revisar, testar e explicar todo o conteúdo entregue.
+Ferramentas de inteligência artificial foram usadas como apoio na estruturação da interface, revisão de código e documentação. Minha equipe, os 4Devs, permanece responsável por revisar, testar e explicar todo o conteúdo entregue.
