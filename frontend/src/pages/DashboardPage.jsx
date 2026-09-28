@@ -32,9 +32,9 @@ export default function DashboardPage() {
       />
 
       <section className="stats-grid" aria-label="Indicadores do dia">
-        <MetricCard icon="users" tone="blue" label="Aguardando" value={waiting.length} note="na fila agora" />
-        <MetricCard icon="activity" tone="orange" label="Em atendimento" value={inService.length} note="em andamento" />
-        <MetricCard icon="check" tone="green" label="Atendidos hoje" value={completed.length} note={`${todayTickets.length} senhas emitidas`} />
+        <MetricCard icon="users" tone="blue" label="Pacientes aguardando" value={waiting.length} note="na fila agora" />
+        <MetricCard icon="activity" tone="orange" label="Pacientes em atendimento" value={inService.length} note="em andamento" />
+        <MetricCard icon="check" tone="green" label="Pacientes atendidos" value={completed.length} note={`${todayTickets.length} senhas emitidas`} />
         <MetricCard icon="clock" tone="purple" label="Tempo médio" value={formatDuration(averageTime)} note="por atendimento" />
       </section>
 
@@ -59,13 +59,13 @@ export default function DashboardPage() {
       <section className="dashboard-grid">
         <div className="card card--table">
           <div className="card__header">
-            <div><h2>Movimentação recente</h2><p>Últimas senhas registradas hoje</p></div>
+            <div><h2>Movimentações</h2><p>Últimas senhas registradas hoje</p></div>
             <Link to="/historico" className="text-link">Ver histórico <Icon name="chevronRight" size={16} /></Link>
           </div>
           {recent.length ? (
             <div className="table-wrap">
               <table>
-                <thead><tr><th>Senha</th><th>Serviço</th><th>Emissão</th><th>Situação</th></tr></thead>
+                <thead><tr><th>Senha</th><th>Tipo</th><th>Emissão</th><th>Situação</th></tr></thead>
                 <tbody>
                   {recent.map((ticket) => (
                     <tr key={ticket.id}>
@@ -82,7 +82,7 @@ export default function DashboardPage() {
         </div>
 
         <div className="card queue-card">
-          <div className="card__header"><div><h2>Fila por serviço</h2><p>Distribuição das senhas aguardando</p></div></div>
+          <div className="card__header"><div><h2>Pacientes por senha</h2><p>Distribuição das senhas aguardando atendimento</p></div></div>
           <div className="queue-bars">
             {Object.entries(ticketTypes).map(([type, info]) => {
               const count = waiting.filter((ticket) => ticket.type === type).length
