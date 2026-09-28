@@ -617,10 +617,17 @@ tbody tr:hover td { background: #fbfdfd; }
   body * { visibility: hidden; }
   .ticket-modal, .ticket-modal * { visibility: visible; }
   .ticket-modal { position: fixed; inset: 0; width: 100%; box-shadow: none; }
-  .ticket-modal__check, .ticket-modal h2, .ticket-modal > p, .ticket-modal__actions { display: none; }
+  .ticket-modal__check,
+.ticket-modal__close,
+.ticket-modal h2,
+.ticket-modal > p,
+.ticket-modal__actions {
+  display: none;
+}
   .printed-ticket { position: absolute; top: 20px; left: 50%; margin: 0; transform: translateX(-50%); }
 }
 
+<<<<<<< HEAD
 /* Detalhes finais da identidade: a cor orienta sem competir com os números. */
 .page-header::before,
 .page-header::after {
@@ -742,4 +749,45 @@ tbody tr:hover td { background: #fbfdfd; }
 @media print {
   .printed-ticket { width: 280px; }
   .printed-ticket > strong { font-size: 48px; }
+=======
+.ticket-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  color: #71818f;
+  background: transparent;
+
+  border: 0;
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.ticket-modal__close:hover {
+  color: var(--navy-900);
+  background: #f0f4f5;
+}
+
+.ticket-modal__close:active {
+  transform: scale(.94);
+}
+
+.ticket-modal__close:focus-visible {
+  outline: 2px solid var(--teal-600);
+  outline-offset: 2px;
+>>>>>>> b84b4889af7469ed038ed3fcb8707165a0191ad9
 }
