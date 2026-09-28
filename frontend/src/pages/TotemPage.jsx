@@ -120,14 +120,20 @@ export default function TotemPage() {
             className="ticket-modal"
             onClick={(event) => event.stopPropagation()}
           >
-            <button
-              className="ticket-modal__close"
-              type="button"
-              aria-label="Fechar"
-              onClick={closeModal}
-            >
-              <Icon name="close" size={20} />
-            </button>
+          <button
+            className="ticket-modal__close"
+            type="button"
+            aria-label="Fechar"
+            onClick={closeModal}
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              zIndex: 10,
+            }}
+        >
+          <Icon name="close" size={20} />
+        </button>
 
             <span className="ticket-modal__check">
               <Icon name="check" size={28} />

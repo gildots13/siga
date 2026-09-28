@@ -627,7 +627,7 @@ tbody tr:hover td { background: #fbfdfd; }
   .printed-ticket { position: absolute; top: 20px; left: 50%; margin: 0; transform: translateX(-50%); }
 }
 
-<<<<<<< HEAD
+HEAD
 /* Detalhes finais da identidade: a cor orienta sem competir com os números. */
 .page-header::before,
 .page-header::after {
@@ -749,11 +749,13 @@ tbody tr:hover td { background: #fbfdfd; }
 @media print {
   .printed-ticket { width: 280px; }
   .printed-ticket > strong { font-size: 48px; }
-=======
+}
+
 .ticket-modal__close {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
 
   width: 36px;
   height: 36px;
@@ -772,9 +774,9 @@ tbody tr:hover td { background: #fbfdfd; }
   cursor: pointer;
 
   transition:
-    background .2s ease,
-    color .2s ease,
-    transform .2s ease;
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .ticket-modal__close:hover {
@@ -783,11 +785,10 @@ tbody tr:hover td { background: #fbfdfd; }
 }
 
 .ticket-modal__close:active {
-  transform: scale(.94);
+  transform: scale(0.94);
 }
 
 .ticket-modal__close:focus-visible {
   outline: 2px solid var(--teal-600);
   outline-offset: 2px;
->>>>>>> b84b4889af7469ed038ed3fcb8707165a0191ad9
 }
